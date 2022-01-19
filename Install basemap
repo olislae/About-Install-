@@ -2,7 +2,7 @@
 
 # 先把官网所有requirement都安装了
 # https://matplotlib.org/basemap/users/installing.html
-# 然后解压
+# 然后下载basemap的source文件并解压
 cd geos-3.3.3
 export GEOS_DIR=<where you want the libs and headers to go> # 对~/.bash_profile中的GEOS路径进行更改，改为实际geos的安装路径
 

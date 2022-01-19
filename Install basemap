@@ -1,0 +1,20 @@
+# 装过三四次basemap了，每次都耗费我老半天，这次还是记录下来安装过程吧
+
+# 先把官网所有requirement都安装了
+# https://matplotlib.org/basemap/users/installing.html
+# 然后解压
+cd geos-3.3.3
+export GEOS_DIR=<where you want the libs and headers to go> # 对~/.bash_profile中的GEOS路径进行更改，改为实际geos的安装路径
+
+cd geos-3.3.3/packages/basemap_data_hires
+python -m pip install . # 注意需要安装在当前env下
+# 或python setup.py install
+cd geos-3.3.3/packages/basemap_data
+python -m pip install .
+# 或python setup.py install
+cd geos-3.3.3/packages/basemap
+python -m pip install .
+# 或python setup.py install
+
+# 最后测试
+python -c "from mpl_toolkits.basemap import Basemap"
